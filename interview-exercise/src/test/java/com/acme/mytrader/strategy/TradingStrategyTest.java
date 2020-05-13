@@ -14,12 +14,12 @@ import main.java.com.acme.mytrader.strategy.TradingStrategy;
 public class TradingStrategyTest {
 	
 	PriceSource stock = null;	
-	ExecutionService servie = null;	
+	ExecutionService service = null;	
 	
 	@Before
 	public void init() {
 	   stock = new TradingStrategy();	
-	   servie = new TradingStrategy();	
+	   service = new TradingStrategy();	
 	}
 	
 	@Test
@@ -32,10 +32,10 @@ public class TradingStrategyTest {
 	
    	@Test
     	public void move() {  
-		servie.buy("IBM", 10, 100);	
-		servie.sell("AWS", 11, 100);
+		service.buy("IBM", 10, 100);	
+		service.sell("AWS", 11, 100);
 		
-		servie.buy("AWS", 101, 100);	
-		servie.sell("IBM", 110, 100);
+		service.buy("AWS", 101, 100);	
+		service.sell("IBM", 110, 100);
     	}  
 }
